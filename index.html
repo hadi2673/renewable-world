@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Solutions | Renewable World</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <!-- RW logo will be added here -->
+    <!-- Placeholder image for demonstration purposes -->
+    <img src="logo.jpg" alt="RW Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Features</a>
+        <ul>
+          <li><a href="blogs.html" target="_blank">Blogs</a></li>
+          <li><a href="q&a.html" target="_blank">Q&A</a></li>
+          <li><a href="webinars.html" target="_blank">Webinars</a></li>
+          <li><a href="news.html" target="_blank">News</a></li>
+          <li><a href="discussion-forums.html" target="_blank">Discussion Forums</a></li>
+          <li><a href="case-studies.html" target="_blank">Case Studies</a></li>
+          <li><a href="interactive-tools.html" target="_blank">Interactive Tools</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Functions</a>
+        <ul>
+          <li><a href="job-portal.html" target="_blank">Job Portal</a></li>
+          <li><a href="innovative-ideas.html" target="_blank">Innovative Ideas</a></li>
+          <li><a href="tech-basics.html" target="_blank">Tech Basics</a></li>
+          <li><a href="resources-library.html" target="_blank">Resources Library</a></li>
+          <li><a href="project-showcase.html" target="_blank">Project Showcase</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a>
+        <ul>
+          <li><a href="Sign-Up.html"target="_blank">Sign Up</a></li>
+          <li><a href="about-us.html"target="_blank">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+    <section id="renewable-energy-sources">
+        <h2>Common Sources of Renewable Energy</h2>
+      
+        <div class="renewable-source">
+          <img src="icon-transparent2.png" alt="Solar Energy">
+          <h3>Solar Energy</h3>
+          <p>Sunlight is harnessed by solar panels to generate electricity. These panels consist of photovoltaic cells that convert sunlight into direct current (DC) electricity. Solar panels can be mounted on rooftops, or on dedicated solar farms. This energy source is available worldwide, with more sunlight hours in equatorial regions.</p>
+        </div>
+      
+        <div class="renewable-source">
+          <img src="wind.jpg" alt="Wind Energy">
+          <h3>Wind Energy</h3>
+          <p>Wind energy harnesses the kinetic energy of moving air by using large wind turbines located on land (onshore) or in sea- or freshwater (offshore). Wind energy has been used for millennia, but onshore and offshore wind energy technologies have evolved over the last few years to maximize the electricity produced - with taller turbines and larger rotor diameters.</p>
+          <p>Though average wind speeds vary considerably by location, the world's technical potential for wind energy exceeds global electricity production, and ample potential exists in most regions of the world to enable significant wind energy deployment.</p>
+          <p>Many parts of the world have strong wind speeds, but the best locations for generating wind power are sometimes remote ones. Offshore wind power offers tremendous potential.</p>
+        </div>
+      
+        <div class="renewable-source">
+          <img src="geothermal.png" alt="Geothermal Energy">
+          <h3>Geothermal Energy</h3>
+          <p>Geothermal energy utilizes the accessible thermal energy from the Earth's interior. Heat is extracted from geothermal reservoirs using methods such as direct heat extraction (DHE), enhanced geothermal systems (EGS), and binary cycle power plants (BCPP).</p>
+          <p>The highest potential for geothermal energy lies in countries with large, untapped geothermal reservoirs. However, these technologies are complex and can be costly, but the long-term benefits are substantial.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li><a href="index1.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact-form">
+        <form id="contactForm" method="post">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <p>&copy; 2024 Renewable World. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      
+      // Redirect to greeting.html
+      window.location.href = "greeting.html";
+    });
+  </script>
+  
