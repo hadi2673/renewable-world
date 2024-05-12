@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Ideas</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .idea-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .idea-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .idea-card img {
+            max-width: 80%; /* Adjusted image size */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center align image */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-buttons button {
+            margin: 0 5px;
+        }
+
+        .cta button {
+            background-color: #ff6600;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-item {
+            flex-shrink: 0;
+            width: 100%;
+            scroll-snap-align: start;
+            text-align: center;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+            display: none;
+        }
+
+        .modal.show {
+            display: block;
+        }
+
+        .modal h3 {
+            margin-top: 0;
+        }
+
+        .modal textarea {
+            width: 100%;
+            height: 150px;
+            resize: vertical;
+        }
+
+        .modal button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Innovative Ideas</h1>
+        <nav>
+            <ul>
+                <li><a href="#featured">Featured Ideas</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><button id="submit-btn">Submit Idea</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="featured" class="carousel">
+            <div class="carousel-item">
+                <h2>Featured Ideas</h2>
+                <div class="idea-card">
+                    <img src="perovskite-cell.jpg" alt="Idea 1">
+                    <h3 style="margin-bottom: 10px;">Perovskite Solar Cells</h3> <!-- Improved heading spacing -->
+                    <p style="text-align: left;"> <!-- Improved paragraph alignment -->
+                        Another innovative technology in solar power is the Perovskite solar cell. They are a type of solar cell that uses a material called perovskite, a mineral with a unique crystal structure. The solar cells were also discovered in 1839 and named after Russian mineralogist Lev Perovski. Perovskite solar cells have gained significant attention and popularity in recent years due to their potential for high efficiency and low cost compared to traditional silicon solar cells. One of the primary advantages of perovskite solar cells is their high efficiency. Perovskite thin-film solar cells have already achieved up to 25% efficiency and have the potential to go much higher — a giant leap considering they were only at around 3% efficiency in 2009. They are already comparable to or even higher than traditional silicon solar cells. Additionally, perovskite solar cells can be manufactured using simple and inexpensive processes, which could lead to lower production costs and broader adoption of solar energy. Perovskite solar cells are also lightweight and flexible, making them ideal for portable and wearable devices. They can also be made semi-transparent, using them in windows and other building materials.
+                    </p>
+                </div>
+                <!-- More idea cards go here -->
+            </div>
+        </section>
+
+        <section id="categories">
+            <h2>Categories</h2>
+            <select id="category-select">
+                <option value="all">All Categories</option>
+                <option value="technology">Technology</option>
+                <option value="design">Design</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <!-- Idea list goes here -->
+        </section>
+
+        <!-- Modal for submitting ideas -->
+        <div id="submit-modal" class="modal">
+            <h2>Submit Your Idea</h2>
+            <form id="idea-form">
+                <input type="text" id="idea-title" placeholder="Title" required>
+                <textarea id="idea-description" placeholder="Description" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <button class="modal-close">Close</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-buttons">
+            <button onclick="shareOnFacebook()">Share on Facebook</button>
+            <button onclick="shareOnTwitter()">Share on Twitter</button>
+            <!-- Add more social buttons as needed -->
+        </div>
+        <div class="cta">
+            <p>Subscribe to our newsletter for more innovative ideas!</p>
+            <button>Subscribe</button>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript code
+        function shareOnFacebook() {
+            // Add code to share on Facebook
+            alert("Sharing on Facebook...");
+        }
+
+        function shareOnTwitter() {
+            // Add code to share on Twitter
+            alert("Sharing on Twitter...");
+        }
+
+        document.getElementById('idea-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let title = document.getElementById('idea-title').value;
+            let description = document.getElementById('idea-description').value;
+            // Add code to submit the idea
+            alert("Idea submitted: " + title + "\nDescription: " + description);
+        });
+
+        // Show/hide submit idea modal
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            document.getElementById('submit-modal').classList.toggle('show');
+        });
+
+        document.querySelector('.modal-close').addEventListener('click', function() {
+            document.getElementById('submit-modal').classList.remove('show');
+        });
+
+        // Filter ideas by category
+        document.getElementById('category-select').addEventListener('change', function() {
+            let selectedCategory = this.value;
+            // Add code to filter ideas by category
+            console.log("Category selected: " + selectedCategory);
+        });
+    </script>
+</body>
+</html>
+
+
