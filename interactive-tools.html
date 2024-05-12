@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Tools</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            margin-top: 40px;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px 5px 0 0;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index1.html" style="color: #fff;">Home</a>
+    </header>
+    <div class="container">
+        <h1 style="color: #333;">Renewable Energy Tools</h1>
+        
+        <h2>Energy Efficiency Calculator</h2>
+        <form id="energyCalculator">
+            <label for="systemPower">System Power (kW):</label>
+            <input type="number" id="systemPower" name="systemPower" min="0" required>
+            
+            <label for="operatingHours">Operating Hours per Day:</label>
+            <input type="number" id="operatingHours" name="operatingHours" min="0" required>
+            
+            <label for="energyCost">Energy Cost (per kWh):</label>
+            <input type="number" id="energyCost" name="energyCost" min="0" required>
+            
+            <button type="button" onclick="calculateEnergyEfficiency()">Calculate</button>
+        </form>
+        <div id="energyResult"></div>
+
+        <h2>Solar Panel Sizing Tool</h2>
+        <form id="solarPanelSizing">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="energyDemand">Energy Demand (kWh/day):</label>
+            <input type="number" id="energyDemand" name="energyDemand" min="0" required>
+            
+            <label for="panelEfficiency">Panel Efficiency (%):</label>
+            <input type="number" id="panelEfficiency" name="panelEfficiency" min="0" max="100" required>
+            
+            <button type="button" onclick="calculateSolarPanelSize()">Calculate</button>
+        </form>
+        <div id="solarPanelResult"></div>
+
+        <h2>Wind Turbine Performance Simulator</h2>
+        <form id="windTurbineSimulator">
+            <label for="windSpeed">Wind Speed (m/s):</label>
+            <input type="number" id="windSpeed" name="windSpeed" min="0" required>
+            
+            <label for="turbineDiameter">Turbine Diameter (m):</label>
+            <input type="number" id="turbineDiameter" name="turbineDiameter" min="0" required>
+            
+            <label for="efficiency">Turbine Efficiency (%):</label>
+            <input type="number" id="efficiency" name="efficiency" min="0" max="100" required>
+            
+            <button type="button" onclick="simulateWindTurbinePerformance()">Simulate</button>
+        </form>
+        <div id="windTurbineResult"></div>
+
+        <h2>Battery Storage Calculator</h2>
+        <form id="batteryStorageCalculator">
+            <label for="energyDemand">Energy Demand (kWh/day):</label>
+            <input type="number" id="energyDemand" name="energyDemand" min="0" required>
+            
+            <label for="availableSpace">Available Space (m^2):</label>
+            <input type="number" id="availableSpace" name="availableSpace" min="0" required>
+            
+            <label for="batteryTechnology">Battery Technology:</label>
+            <select id="batteryTechnology" name="batteryTechnology">
+                <option value="leadAcid">Lead Acid</option>
+                <option value="lithiumIon">Lithium-ion</option>
+                <option value="flowBattery">Flow Battery</option>
+                <!-- Add more options as needed -->
+            </select>
+            
+            <button type="button" onclick="calculateBatteryStorage()">Calculate</button>
+        </form>
+        <div id="batteryStorageResult"></div>
+
+        <h2>Carbon Emission Reduction Estimator</h2>
+        <form id="carbonEmissionEstimator">
+            <label for="fossilFuelEmission">Fossil Fuel Emission (tons/year):</label>
+            <input type="number" id="fossilFuelEmission" name="fossilFuelEmission" min="0" required>
+            
+            <label for="renewableEnergyReduction">Reduction from Renewable Energy (tons/year):</label>
+            <input type="number" id="renewableEnergyReduction" name="renewableEnergyReduction" min="0" required>
+            
+            <button type="button" onclick="calculateEmissionReduction()">Calculate</button>
+        </form>
+        <div id="emissionReductionResult"></div>
+
+        <h2>Project Collaboration Platform</h2>
+        <form id="projectCollaborationForm">
+            <label for="projectTitle">Project Title:</label>
+            <input type="text" id="projectTitle" name="projectTitle" required>
+            
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+            
+            <label for="collaborators">Collaborators (separated by commas):</label>
+            <input type="text" id="collaborators" name="collaborators" required>
+            
+            <button type="button" onclick="submitProject()">Submit Project</button>
+        </form>
+        <div id="submissionResult"></div>
+    </div>
+
+    <script>
+        function calculateEnergyEfficiency() {
+            var systemPower = parseFloat(document.getElementById('systemPower').value);
+            var operatingHours = parseFloat(document.getElementById('operatingHours').value);
+            var energyCost = parseFloat(document.getElementById('energyCost').value);
+            var energyConsumption = systemPower * operatingHours * 30;
+            var monthlyCost = energyConsumption * energyCost;
+            var resultElement = document.getElementById('energyResult');
+            resultElement.innerHTML = "<h3>Results</h3>" +
+                                      "<p>Monthly Energy Consumption: " + energyConsumption.toFixed(2) + " kWh</p>" +
+                                      "<p>Monthly Energy Cost: $" + monthlyCost.toFixed(2) + "</p>";
+        }
+        
+        function calculateSolarPanelSize() {
+            var location = document.getElementById('location').value;
+            var energyDemand = parseFloat(document.getElementById('energyDemand').value);
+            var panelEfficiency = parseFloat(document.getElementById('panelEfficiency').value);
+            
+            // Perform calculations here
+            // For demonstration, let's assume the optimal panel size is 10 kW
+            var optimalPanelSize = 10;
+            
+            var resultElement = document.getElementById('solarPanelResult');
+            // Display results
+            resultElement.innerHTML = "<h3>Results</h3>" +
+                                      "<p>Location: " + location + "</p>" +
+                                      "<p>Energy Demand: " + energyDemand + " kWh/day</p>" +
+                                      "<p>Panel Efficiency: " + panelEfficiency + "%</p>" +
+                                      "<p>Optimal Solar Panel Size: " + optimalPanelSize + " kW</p>";
+        }
+        
+        function simulateWindTurbinePerformance() {
+            var windSpeed = parseFloat(document.getElementById('windSpeed').value);
+            var turbineDiameter = parseFloat(document.getElementById('turbineDiameter').value);
+            var efficiency = parseFloat(document.getElementById('efficiency').value);
+            
+            // Perform simulation calculations here
+            // For demonstration, let's assume the power output is proportional to wind speed and efficiency
+            var powerOutput = windSpeed * efficiency;
+            
+            var resultElement = document.getElementById('windTurbineResult');
+            // Display results
+            resultElement.innerHTML = "<h3>Results</h3>" +
+                                      "<p>Wind Speed: " + windSpeed + " m/s</p>" +
+                                      "<p>Turbine Diameter: " + turbineDiameter + " m</p>" +
+                                      "<p>Turbine Efficiency: " + efficiency + "%</p>" +
+                                      "<p>Power Output: " + powerOutput.toFixed(2) + " kW</p>";
+        }
+        
+        function calculateBatteryStorage() {
+            var energyDemand = parseFloat(document.getElementById('energyDemand').value);
+            var availableSpace = parseFloat(document.getElementById('availableSpace').value);
+            var batteryTechnology = document.getElementById('batteryTechnology').value;
+            
+            // Perform calculations here
+            // For demonstration, let's assume the required battery capacity is proportional to energy demand and available space
+            var batteryCapacity = energyDemand * availableSpace;
+            
+            var resultElement = document.getElementById('batteryStorageResult');
+            // Display results
+            resultElement.innerHTML = "<h3>Results</h3>" +
+                                      "<p>Energy Demand: " + energyDemand + " kWh/day</p>" +
+                                      "<p>Available Space: " + availableSpace + " m^2</p>" +
+                                      "<p>Battery Technology: " + batteryTechnology + "</p>" +
+                                      "<p>Required Battery Capacity: " + batteryCapacity.toFixed(2) + " kWh</p>";
+        }
+        
+        function calculateEmissionReduction() {
+            var fossilFuelEmission = parseFloat(document.getElementById('fossilFuelEmission').value);
+            var renewableEnergyReduction = parseFloat(document.getElementById('renewableEnergyReduction').value);
+            
+            // Perform calculations here
+            var reductionPercentage = (renewableEnergyReduction / fossilFuelEmission) * 100;
+            
+            var resultElement = document.getElementById('emissionReductionResult');
+            // Display results
+            resultElement.innerHTML = "<h3>Results</h3>" +
+                                      "<p>Fossil Fuel Emission: " + fossilFuelEmission + " tons/year</p>" +
+                                      "<p>Reduction from Renewable Energy: " + renewableEnergyReduction + " tons/year</p>" +
+                                      "<p>Percentage Reduction: " + reductionPercentage.toFixed(2) + "%</p>";
+        }
+        
+        function submitProject() {
+            var projectTitle = document.getElementById('projectTitle').value;
+            var projectDescription = document.getElementById('projectDescription').value;
+            var collaborators = document.getElementById('collaborators').value.split(',');
+            
+            // Here you can perform further actions like sending data to a server or displaying a confirmation message.
+            // For demonstration, let's just display the submitted data.
+            
+            var resultElement = document.getElementById('submissionResult');
+            // Display submission details
+            resultElement.innerHTML = "<h3>Submission Details</h3>" +
+                                      "<p><strong>Project Title:</strong> " + projectTitle + "</p>" +
+                                      "<p><strong>Project Description:</strong> " + projectDescription + "</p>" +
+                                      "<p><strong>Collaborators:</strong> " + collaborators.join(', ') + "</p>";
+        }
+
+        // Add functions for other tools as needed
+    </script>
+</body>
+</html>
+
