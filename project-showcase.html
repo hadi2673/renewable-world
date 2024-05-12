@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Projects</title>
+    <style>
+        /* CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .home-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .home-button:hover {
+            background-color: #3e8e41;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-item {
+            width: 30%;
+            margin: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .project-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .project-item h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .project-item p {
+            font-size: 14px;
+            color: #666;
+        }
+        .project-item button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .project-item button:hover {
+            background-color: #3e8e41;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .project-item {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .project-item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Renewable Energy Projects</h1>
+        <a href="index1.html" class="home-button">Home</a>
+    </header>
+
+    <div class="container">
+        <h2>Page 1</h2>
+        <div class="project">
+            <!-- Project 1: Wind Farm Project -->
+            <div class="project-item">
+                <img src="wind.jpg" alt="Wind Farm Project">
+                <h2>Wind Farm Project</h2>
+                <p>Wind farms harness the power of wind to generate electricity. These projects typically involve the installation of multiple wind turbines in open areas with high wind speeds. The turbines capture kinetic energy from the wind and convert it into electrical energy through a generator. Wind farms are a sustainable energy solution, as wind is a renewable resource that does not produce greenhouse gas emissions during electricity generation.</p>
+                <a href="https://en.wikipedia.org/wiki/Wind_farm" target="_blank"><button>Learn More</button></a>
+            </div>
+            <!-- Project 2: Solar Panel Project -->
+            <div class="project-item">
+                <img src="solar1.jpg" alt="Solar Panel Project">
+                <h2>Solar Panel Project</h2>
+                <p>Solar panel installations utilize photovoltaic cells to convert sunlight into electricity. Solar energy is abundant and freely available, making it an environmentally friendly alternative to traditional fossil fuels. Solar panels can be installed on rooftops, in solar farms, or integrated into buildings' architecture. Solar power is a reliable and clean energy source, contributing to reducing carbon emissions and combating climate change.</p>
+                <a href="https://nevonprojects.com/solar-projects/" target="_blank"><button>Learn More</button></a>
+            </div>
+            <!-- Project 3: Hydro Power Project -->
+            <div class="project-item">
+                <img src="hydro2.jpg" alt="Hydro Power Project">
+                <h2>Hydro Power Project</h2>
+                <p>Hydroelectric power plants generate electricity by harnessing the energy of flowing or falling water. These projects often involve the construction of dams or diversion structures to control the flow of water and channel it through turbines. As water flows through the turbines, it drives generators to produce electricity. Hydroelectric power is a reliable and renewable energy source, with minimal greenhouse gas emissions and low operating costs once infrastructure is in place.</p>
+                <a href="https://www.britannica.com/science/hydroelectric-power" target="_blank"><button>Learn More</button></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2022 - Renewable Energy Projects</p>
+    </footer>
+</body>
+</html>
+
+
